@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-color: #fff;
+    --gray-color: #EFF3F4;
+    --skyblue-color: #1A8CD8;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sidebaroption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+span, .fa-x-twitter{
+    padding: 20px;
+}
+
+.sidebaroption h2{
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.sidebaroption:hover{
+    background-color: var(--gray-color);
+    border-radius: 30px;
+}
+
+.sidebaroption.active{
+    color: var(--skyblue-color);
+}
+
+.sidebar_tweet{
+    width: 100%;
+    background-color: var(--skyblue-color);
+    border: none;
+    color: var(--white-color);
+    border-radius: 30px;
+    font-weight: 900;
+    height: 50px;
+    margin-top: 20px;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.leftsidebar{
+    border-right: 1px solid var(--gray-color);
+    flex: 0.2;
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fa-x-twitter{
+    font-size: 2rem;
+}
+
+/* Section */
+.section{
+    flex: 0.5;
+    border-right: 1px solid var(--gray-color);
+    min-width: fit-content;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.section_header{
+    position: sticky;
+    top: 0;
+    background-color: var(--white-color);
+    z-index: 100;
+    border: 1px solid var(--gray-color);
+    padding: 15px 20px;
+}
+
+.section_header h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.section::-webkit-scrollbar{
+    display: none;
+}
+
+/* Tweetbox */
+
+.tweetbox_input img{
+    border-radius: 50%;
+    height: 40px;
+    font-weight: 40px;
+}
+
+.tweetbox{
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--gray-color);
+    padding-right: 10px;
+}
+
+
+
+.tweetbox_input{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.tweetbox form{
+   display: flex;
+   flex-direction: column;
+}
+
+.tweetbox_bottom{
+    display: flex;
+    color: var(--skyblue-color);
+}
+
+.tweetbox_input input{
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.tweetbox_input span{
+    justify-content: left;
+    margin-top: 20px;
+    margin-right: auto;
+    color: var(--skyblue-color);
+}
+
+.tweetbox_btn{
+    background-color: var(--skyblue-color);
+    border: none;
+    color: var(--white-color);
+    font-weight: 900;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+/* Post */
+.post_avatar img{
+    border-radius: 50%;
+    height: 40px;
+}
+
+.post{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--gray-color);
+    padding-bottom: 10px;
+}
+
+.post_body img{
+    width: 350px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.post_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.fa-certificate{
+    font-size: 14px !important;
+    color: var(--skyblue-color);
+    margin-right: 5px;
+}
+
+.post_headerspecial{
+    font-weight: 600;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+}
+
+.post_headertext h4{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.post_headerdescription p{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.post_body{
+    flex: 1;
+    padding: 10px;
+}
+
+.post_avatar{
+    padding: 20px;
+}
+
+/* Right Sidebar */
+.rightsidebar{
+    flex: 0.3;
+}
+
+.rightsidebar_input{
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-color);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.rightsidebar_input input{
+    border: none;
+    background-color: var(--gray-color);
+    outline: none;
+}
+
+.fa-magnifying-glass{
+    color: rgb(128, 128, 128);
+}
+
+.rightsidebar_container {
+    display: block;
+    
+    background-color: var(--gray-color);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 25vh;   
+}
+
+.rightsidebar_container h2{
+    font-size: 700;
+    padding: 10px;
+}
+
+.rightsidebar_container p{
+    padding: 10px;
+}
+
+.rightsidebar_btn{
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 70px;
+    font-size: larger;
+    padding: 10px;
+}
+
+@media(){
+    
+}
